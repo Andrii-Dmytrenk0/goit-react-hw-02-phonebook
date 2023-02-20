@@ -11,17 +11,19 @@ export class App extends React.Component {
 
   handelChange = event => {
     const { name, value } = event.currentTarget;
-
-
     this.setState({ [name]: value, })
   };
 
+  handelSubmit = event => {
+    event.preventDefault();
 
+    console.log(this.state)
+  }
 
   render() {
   
     return (
-      <form>
+      <form onSubmit={this.handelSubmit}>
         <label>Name</label>
         <input
         type="text"
@@ -41,7 +43,8 @@ export class App extends React.Component {
         required
         onChange={this.handelChange}
         value={this.state.number}
-      />
+        />
+        <button type="submit">add Contacts</button>
       </form>
     )
   }
