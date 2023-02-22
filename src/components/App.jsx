@@ -34,7 +34,12 @@ export class App extends React.Component {
         onChange={this.handelChange}
         value={this.state.name}
         />
-        <label>Number</label>
+        <button type="submit">add Contacts</button>
+        <h2>Contacts</h2>
+        <ul>
+          <li>{this.state.name}</li>
+        </ul>
+        {/* <label>Number</label>
         <input
         type="tel"
         name="number"
@@ -43,8 +48,7 @@ export class App extends React.Component {
         required
         onChange={this.handelChange}
         value={this.state.number}
-        />
-        <button type="submit">add Contacts</button>
+        /> */}
       </form>
     )
   }
